@@ -51,12 +51,32 @@ puts "\n"
 reply = true
 while reply
     puts "You have two options: Do you want to run or stand still?"
-    answer1 = gets.downcase.chomp
+    answer1 = gets.chomp.downcase
         if answer1 == 'run'
             puts "\n"
-            puts "'I WANT MOMMMYYYYYYYY!!!! #{username.upcase} IS SCAAAAAARED.' You get up to run, but a hand grabs you by the shoulder. You turn around, and suddenly you are in a foggy forest."
-            reply = false
-        elsif answer1 == "stand still"
+            puts "'I WANT MOMMMYYYYYYYY!!!! #{username.upcase} IS SCAAAAAARED.' You get up to run, but a hand grabs you by the shoulder. You turn around, and suddenly you are in a forest. You see a road with two paths: A foggy and muddy path on the left, and the flowery and moonlit path on the right. Which way do you go? Left? or Right?"
+            # reply = false
+            answer4 = gets.chomp.downcase
+            if answer4 == 'left'
+              puts "\n"
+              puts 'As you walk down the foggy path, it starts to clear up and you see Morpheus. He asks you:'
+              "'Do you want the red pill or blue pill?'".print_dwarf
+              puts "\n"
+              answer5 = gets.chomp.downcase
+              if answer5 == 'red pill'
+                puts "\n"
+                puts 'You wake up in the middle of class. And Austin is asking the check-in question of the day: Would you rather be able to speak all foreign languages or be able to speak to animals?'
+                reply = false
+              elsif answer5 == 'blue pill'
+                puts "\n"
+                puts 'Morpheus disappears into the fog and as you keep walking a murder of crows attack you.'
+                'YOU JUST GOT EATEN ALIVE'.print_dwarf
+                reply = false
+              else
+                puts "You're not listening. Red pill or Blue pill?"
+              end
+            end
+        elsif answer1 == 'stand still'
             puts "\n"
             puts "The pair of white eyes approach from the corner. As it gets closer and closer, you see a familiar face. It is your 5th grade teacher. She stops right in front of you and asks, 'What do you call a group of crows?"
             answer2 = gets.chomp.downcase
